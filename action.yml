@@ -8,12 +8,17 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - shell: bash
+      run: |
+        echo jupyter-repo2docker==2024.7.0 > .gesis-methodshub-gh-action-preview.txt
     - uses: actions/setup-python@v5
       with:
         python-version: '3.13'
-        cache: 'pip' # caching pip dependencies
+        cache: pip
+        cache-dependency-path:
+          - .gesis-methodshub-gh-action-preview.txt
     - shell: bash
-      run: python -m pip install jupyter-repo2docker==2024.7.0
+      run: python -m pip install -r .gesis-methodshub-gh-action-preview.txt
     - shell: bash
       run: |
         repo2docker \
