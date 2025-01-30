@@ -10,6 +10,6 @@ jobs:
     name: Test GitHub Action
     steps:
       - uses: actions/checkout@v4
-      - uses: ./action
+      - uses: ./
         with:
           file: README.md
