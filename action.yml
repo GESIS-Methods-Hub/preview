@@ -15,8 +15,7 @@ runs:
       with:
         python-version: '3.13'
         cache: pip
-        cache-dependency-path:
-          - .gesis-methodshub-gh-action-preview.txt
+        cache-dependency-path: .gesis-methodshub-gh-action-preview.txt
     - shell: bash
       run: python -m pip install -r .gesis-methodshub-gh-action-preview.txt
     - shell: bash
