@@ -1,0 +1,15 @@
+name: Test
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+jobs:
+  test-github-action:
+    runs-on: ubuntu-latestubuntu-24.04
+    name: Test GitHub Action
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./action
+        with:
+          file: README.md
