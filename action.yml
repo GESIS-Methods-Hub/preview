@@ -34,5 +34,6 @@ runs:
         $GITHUB_REPOSITORY_ID:$GITHUB_SHA \
         quarto \
         render \
+        $INPUT_FILE \
         --execute \
-        $INPUT_FILE
+        --to html
